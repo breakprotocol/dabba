@@ -1,0 +1,365 @@
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "../bower_components/flexslider/flexslider.css";
+@import "../bower_components/font-awesome/css/font-awesome.min.css";
+@import "../bower_components/fancyBox/source/jquery.fancybox.css";
+@import "../bower_components/swiper/dist/css/swiper.min.css";
+@import "../bower_components/smart-app-banner/smart-app-banner.css";
+@import "../bower_components/angular-ui-select/dist/select.min";
+
+
+/* Bootstrap Variables Goes Here */
+
+$brand-primary: #0d9dff !default;
+$brand-success: #84ce3c !default;
+$brand-warning: #ffec39 !default;
+$brand-danger: #fc483f !default;
+$brand-info: #000072 !default;
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+img.loading {
+    text-align: center;
+    opacity: 1;
+    width: 32px !important;
+    height: auto;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+}
+
+img {
+    opacity: 0;
+    @include transition(all 300ms ease);
+}
+
+img.doneLoading {
+    opacity: 1;
+}
+
+nav li:hover .dropdown-menu {
+    display: block;
+    min-width: 500px
+}
+
+#map img {
+    opacity: 1;
+}
+
+a,
+.btn,
+[ui-sref] {
+    cursor: pointer;
+    @include transition(all ease 300ms);
+}
+
+footer {
+    font-size: 12px;
+    background-color: #eee;
+    padding: 10px 0;
+    p {
+        margin: 0;
+    }
+}
+
+//bootstrap forms
+.input-lg,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-addon,
+.input-group-lg>.input-group-btn>.btn,
+.btn,
+.form-control {
+    border-radius: 0;
+    @include box-shadow(none);
+}
+
+.form-control:focus {
+    border-color: $brand-primary;
+    outline: 0;
+    @include box-shadow(none);
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-invalid {
+    color: $brand-danger;
+    .form-control {
+        border-color: $brand-danger;
+        color: $brand-danger;
+        &::-webkit-input-placeholder {
+            color: $brand-danger;
+        }
+    }
+}
+
+.form-submission {
+    min-height: 300px;
+}
+
+//FLEX SLIDER FIXES
+.flex-direction-nav {
+    a {
+        height: auto;
+    }
+    .flex-prev {
+        left: 10px !important;
+    }
+    .flex-next {
+        right: 10px !important;
+    }
+}
+
+//SWIPER CSS
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+    background-image: url(../img/prev.png);
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+    background-image: url(../img/next.png);
+}
+
+
+/* Start writing sass here */
+
+.content {
+    min-height: 450px;
+}
+
+.full-img {
+    width: 100%;
+    display: block;
+}
+
+.felx-menu {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.navbar-default {
+    margin-top: -4px;
+}
+
+.navbar-brand-size {
+    padding-top: -5;
+    padding-bottom: -5;
+    position: relative;
+}
+
+.header-brand-name {
+    font-family: pristina;
+    margin: 12px 0 4px;
+    position: relative;
+}
+
+.header-img {
+    float: left;
+    padding: 6px;
+    width: 67px;
+}
+
+.header-brand-out {
+    float: left
+}
+
+.header-brand-in {
+    float: left
+}
+
+.header-box {
+    position: relative;
+    left: 37px
+}
+
+.sidenav {
+    height: 100%;
+    width: 158px;
+    position: relaive;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sub-category {
+    height: 100%;
+}
+
+.sub-category ul {
+    list-style: none;
+    text-align: left;
+    padding-left: 0px;
+    overflow: auto;
+    max-height: 350px;
+    top: 25px;
+    position: relative;
+    li {
+        padding:5px;
+        a{
+            color:black;
+        }
+    }
+
+}
+
+.category-outer-holder{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.category-holder{
+    margin:auto;
+}
+
+.products {
+    max-height: calc(100vh - 150px);
+    overflow-x: hidden;
+    .singleprod-imgholder:hover {
+        overflow: hidden;
+        cursor: pointer;
+        background-color: #e3e3e3;
+        box-shadow: 0 0 5px #000;
+    }
+    img {
+        max-height: 100%;
+        margin: 0 auto;
+    }
+}
+
+.products::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+    /* or add it to the track */
+    /* or add it to the track */
+}
+
+.products::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.products::-webkit-scrollbar-thumb {
+    background-color: #726969;
+}
+
+// gallary
+div.gallery {
+    // border: 1px solid #ccc;
+}
+
+// div.gallery:hover {
+//     border: 1px solid #777;
+// }
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 3px 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+.product-holder{
+    height: 100%;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.products .singleprod-imgholder{
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    max-width: 195px;
+}
+
+.singleprod-imgholder img {
+    position: absolute;
+  }
+
+.desc{
+    // position: absolute;
+    text-align: center;
+  }
+
+
+
+// .singleprod-imgholder img {
+//     vertical-align: middle;
+//     margin: 0 auto;
+// }
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+//gallary end
+.sidenav-category {
+    position: absolute;
+    top: 0px
+}
+
+.prod-id {
+    opacity: 0.6;
+}
+
+.footer-start {
+    line-height: 0.5;
+    float: left;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+
+.imgwrapper {
+   width: 50%;
+   margin:auto
+}
+.caption{ 
+    z-index:100;
+ 
+}
+
+
+
+@import "fancybox-override";
+@import "mobile";

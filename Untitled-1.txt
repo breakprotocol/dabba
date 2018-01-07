@@ -1,0 +1,31 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "boxxit";
+// Create connection
+$mysqli = new mysqli($servername, $username, $password,$db);
+
+// Check connection
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+} 
+
+?>
+
+
+
+<?php
+$servername = "localhost";
+$username = "id891941_dabba_admin";
+$password = "admin@12345";
+$db = "id891941_dabba";
+// Create connection
+$mysqli = new mysqli($servername, $username, $password,$db);
+
+// Check connection
+if ($mysqli->connect_error) {
+    die("Connection failed: " . $mysqli->connect_error);
+} 
+
+?>

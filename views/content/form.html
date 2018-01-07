@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-4">
+        <!--    <span data-drag="true" jqyoui-draggable>So you think you can drag</span>
+          <input type="text" data-drag="true" jqyoui-draggable class="form-control" id="usr">-->
+        <label data-drag="true"  class="caption"  jqyoui-draggable ng-model="message1">{{message1.name}}</label>
+    </div>
+    <div class="col-md-8">
+        <div class="imgwrapper">
+        <img src="img/envelope.png" class="img-responsive" data-drop="true" data-jqyoui-options ng-model="message2" jqyoui-droppable></div>
+            <label data-drag="false" data-jqyoui-options ng-model="message2" jqyoui-draggable ng-hide="!message2.name">{{message2.name}}
+            </div>
+</div>
+<div class = "row">
+    <div class="col-md-4">
+     <input type="text" class="form-control" ng-model="message1.name">
+</div>
+</div>
+    <!--    <div class="imgwrapper">
+            <img src="img/envelope.png"  data-drop="true" jqyoui-droppable class="img-responsive">
+        </div>
+    </div>-->

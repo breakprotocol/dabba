@@ -1,0 +1,27 @@
+<ul class="nav navbar-nav">
+    <li ng-repeat="menu in navigation track by $index" class="{{menu.classis}}">
+        <a ui-sref="{{menu.anchor}}" ng-if="menu.anchor!=''">{{menu.name}}</a>
+        <a ng-if="menu.anchor==''">{{menu.name}}</a>
+        <div class="menu-holder">
+
+            <ul class="dropdown-menu" ng-if="menu.subnav!='';">
+                <div class="left-menu-holder">
+
+                </div>
+                <div class="right-menu-holder">
+                    <li class="col-md-4 col-xs-12 {{submenu.classis}}" ng-repeat="submenu in menu.subnav[0] track by $index">
+                        <a ui-sref="{{submenu.anchor}}({'name':submenu.name,'id':submenu.id})">{{submenu.name}}</a>
+                    </li>
+                    <li class="col-md-4 col-xs-12 {{submenu.classis}}" ng-repeat="submenu in menu.subnav[1] track by $index">
+                        <a ui-sref="{{submenu.anchor}}({'name':submenu.name,'id':submenu.id})">{{submenu.name}}</a>
+                    </li>
+                    <li class="col-md-4 col-xs-12 {{submenu.classis}}" ng-repeat="submenu in menu.subnav[2] track by $index">
+                        <a ui-sref="{{submenu.anchor}}({'name':submenu.name,'id':submenu.id})">{{submenu.name}}</a>
+                    </li>
+                </div>
+
+            </ul>
+        </div>
+
+    </li>
+</ul>

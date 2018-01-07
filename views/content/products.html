@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-2 large-sub-cat">
+            <div class="sub-category">
+                <span class="sidenav-category">
+                    <b> {{category.name}}</b>
+                </span>
+                <ul>
+                    <li ng-repeat="sub in subCategories track by $index" ng-click="getProducts(sub)">
+                        <a href="">{{sub.name}}</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- <span>jasbhdashbashghdhashdyasgdjysag</span> -->
+        <div class="col-sm-12 col-xs-12 mobile-sub-cat">
+            <div class="category-outer-holder">
+                <div>
+                    <b> {{category.name}}</b>
+                </div>
+                <ui-select ng-model="tpObject" style="width: 300px;" theme="bootstrap" on-select="getProducts($select.selected)" search-enabled="false"
+                    title="Choose a country" class="category-holder">
+                    <ui-select-match placeholder="Select or search a country in the list...">{{$select.selected.name}}</ui-select-match>
+                    <ui-select-choices repeat="sub in subCategories track by $index">
+                        <span>{{sub.name}}</span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-10  col-sm-12 col-xs-12">
+            <div class="products">
+                <div class="row">
+                    <div>{{$scope.selectedSubCategory.name}}</div>
+                    <div class="col-md-3 col-xs-12" ng-repeat="prod in products">
+                        <div class="product-holder">
+                            <div class="singleprod-imgholder">
+                                <img ng-src="{{imgUrl}}{{prod.link}}" alt="Trolltunga Norway" width="200" height="200">
+                            </div>
+                            <div class="desc">
+                                <div> {{prod.name}} </div>
+                                <div class="prod-id"> {{prod._id}} </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
