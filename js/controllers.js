@@ -1,6 +1,6 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ksSwiper'])
 
-    .controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('HomeCtrl',["$scope", "TemplateService", "NavigationService", "$timeout", function ($scope, TemplateService, NavigationService, $timeout) {
 
         $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
         console.log($scope.template);
@@ -16,9 +16,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
             'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
         ];
-    })
+    }])
 
-    .controller('ProductsCtrl', function ($scope, TemplateService, NavigationService, $timeout, $stateParams) {
+    .controller('ProductsCtrl',["$scope", "TemplateService", "NavigationService", "$timeout", "$stateParams", function ($scope, TemplateService, NavigationService, $timeout, $stateParams) {
         $scope.template = TemplateService.changecontent("products"); //Use same name of .html file
         console.log($scope.template);
         $scope.menutitle = NavigationService.makeactive("Products"); //This is the Title of the Website
@@ -58,9 +58,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
 
 
-    })
+    }])
 
-    .controller('CategoryCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('CategoryCtrl',["$scope", "TemplateService", "NavigationService", "$timeout", function ($scope, TemplateService, NavigationService, $timeout) {
         alert();
         $scope.template = TemplateService.changecontent("category"); //Use same name of .html file
         console.log($scope.template);
@@ -70,9 +70,9 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         $scope.navigation = NavigationService.getnav();
         console.log($scope.navigation);
 
-    })
+    }])
 
-    .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+    .controller('FormCtrl',["$scope", "TemplateService", "NavigationService", "$timeout", function ($scope, TemplateService, NavigationService, $timeout) {
         $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
         $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
         TemplateService.title = $scope.menutitle;
@@ -85,17 +85,17 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
             
 
       
-    })
+    }])
 
-    .controller('headerctrl', function ($scope, TemplateService) {
+    .controller('headerctrl',["$scope", "TemplateService", function ($scope, TemplateService) {
         $scope.template = TemplateService;
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
             $(window).scrollTop(0);
         });
         $.fancybox.close(true);
-    })
+    }])
 
-    .controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
+    .controller('languageCtrl',["$scope", "TemplateService", "$translate", "$rootScope", function ($scope, TemplateService, $translate, $rootScope) {
 
         $scope.changeLanguage = function () {
             console.log("Language CLicked");
@@ -116,6 +116,6 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
         };
 
 
-    })
+    }])
 
 ;

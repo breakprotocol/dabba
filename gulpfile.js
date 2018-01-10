@@ -21,7 +21,9 @@ var jsArray = [
     './bower_components/angulartics/dist/angulartics.min.js',
     './bower_components/angulartics-google-analytics/dist/angulartics-ga.min.js',
     './bower_components/angular-swiper/dist/angular-swiper.js',
-
+    './bower_components/angular-ui-select/dist/select.min.js',
+    'https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js',
+    './js/custom/dragdrop.min.js',
     //Work files
     './js/app.js',
     './js/language.js',
